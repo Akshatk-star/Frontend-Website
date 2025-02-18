@@ -102,7 +102,7 @@ nav button svg {
 #page1 {
     padding-bottom: 30vh;
     padding-top: 20vh;
-    min-height: 100vh;
+    min-height: 60vh;
     width: 100%;
     background-color: #111;
     display: flex;
@@ -263,8 +263,6 @@ nav button svg {
     justify-content: center;
     align-items: center;
     position: relative;
-    margin-bottom: 0;
-    padding-bottom: 0;
 }
 .playreel svg{
     height: 15vh;
@@ -281,100 +279,39 @@ nav button svg {
     position: absolute;
     object-fit: cover;
 }
-
-/* First, create a white section wrapper for pages 4 and 5 */
-.white-section-wrapper {
-    background-color: rgb(255, 251, 251);
-    width: 100%;
-    margin: 0;
-    padding: 0;
+#page4, #page5 {
     position: relative;
+    z-index: 1;
+    margin-top: 0;
+    background-color: #111;
+    padding-top: 10vh;
 }
-
-/* Update page4 */
-#page4 {
-    height: auto;
-    min-height: 90vh;
+#page4{
+     height: 110vh;
+     background-color: white;
+     width: 100%;
+     margin-top: 10vh;
+     margin-bottom: 10vh;
+     display: flex;
+     justify-content: space-between;
+    
+    
+}
+#page5{
+    height: 100vh;
+    background-color: rgb(251, 251, 251);
     width: 100%;
+    margin-top: 1vh;
+    margin-bottom: 10vh;
     display: flex;
     justify-content: space-between;
-    padding: 10vh 0;
-    margin: 0;
-    background-color: transparent;
-}
-
-/* Update page5 */
-#page5 {
-    height: auto;
-    min-height: 90vh;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 10vh 0;
-    margin: 0;
-    background-color: transparent;
-}
-
-/* Ensure all text in these sections is black */
-.white-section-wrapper * {
-    color: black;
-}
-
-/* Keep specific color overrides for gray text */
-.page4right h6,
-.page4right h4 {
-    color: gray;
-    opacity: 0.6;
-}
-
-.page4left h1,
-.page4right h5,
-.page4right h6,
-.page4right h4,
-.page5left h2,
-.page5left h4,
-.page5left h3 {
-    color: black;
-}
-.page4right,
-.page5right {
-    background-color: transparent;
-}
-.page4left h1{
-   height: auto; /* Change from 200vh */
-   width: 90vh;
-   margin-left: 10vh;
-   margin-top: 25vh;
-   font-weight: 750;
-   font-size: 6.3vh;
-   
-}
-.page4right h5{
-   height: 2vh;
-   margin-top: 5vh;
-   font-weight: 500;
-   
-}
-.page4right h6{
-   height: vh;
-   margin-top: 15vh;
-   margin-bottom: 4vh;
-   font-weight: 550;
-   opacity: 0.6;
-   
-}
-.page4right h4{
-   height: vh;
-   margin-top: 40vh;
-   margin-bottom: 4vh;
-   font-weight: 550;
-   opacity: 0.6;
-   
+    position: relative;
 }
 .page5left h2{
     font-size: 6vh;
     margin-top: 8vh;
     margin-left: 20vh;
+    color: #111;
     font-weight: 540;
 }
 .page5left h4{
@@ -382,12 +319,16 @@ margin-top: 15vh;
 margin-left: 19vh;
 font-weight: 549;
 font-size: 3vh;
+color: black;
+width: 100%;
 }
 .page5left h3{
     margin-top: 10vh;
 margin-left: 22vh;
 font-weight: 300;
 font-size: 6vh;
+color: black;
+
 }
 .page5right img{
     height: 60vh;
@@ -397,21 +338,19 @@ font-size: 6vh;
     margin-left: 43vh;
     
 }
-.page5right video {
+.page5right video{
     height: 60vh;
     width: 60%;
+    margin-top: 13vh;
     position: absolute;
-    left: 35%;
-    top: 13vh;
+    left: 35%; /* Adjusted from 40% */
     opacity: 0;
-    margin-top: 0; /* Remove margin */
 }
 .topper{
     border-bottom: 2px solid black;
     margin-top: 10vh;
     margin-left: 20vh;
     width: 50%;
-    background-color: transparent;
 }
 .topper1{
     border-bottom: 2px solid rgb(207, 203, 203);
@@ -419,19 +358,65 @@ font-size: 6vh;
     margin-left: 14vh;
     width: 80%;
 }
+.page4left h1{
+   height: 200vh;
+   width: 90vh;
+   margin-left: 10vh;
+   margin-top: 25vh;
+   color: black;
+   font-weight: 750;
+   font-size: 6.3vh;
+   
+}
+.page4right h5{
+   height: 2vh;
+   /* margin-left: -10vh; */
+   margin-top: 5vh;
+   color: black;
+   font-weight: 200;
+   font-size: 3.2vh;
+   font-weight: 500;
+   
+}
+.page4right h6{
+   height: vh;
+   /* margin-left: -10vh; */
+   margin-top: 15vh;
+   margin-bottom: 4vh;
+   color: gray;
+   font-weight: 750;
+   font-size: 3vh;
+   font-weight: 550;
+   opacity: 0.6;
+   
+}
+.page4right h4{
+   height: vh;
+   /* margin-left: -10vh; */
+   margin-top: 40vh;
+   margin-bottom: 4vh;
+   color: gray;
+   font-weight: 750;
+   font-size: 3vh;
+   font-weight: 550;
+   opacity: 0.6;
+   
+}
 .page6right{
     margin-left: 25vw; /* Adjusted from 30vw */
     width: 70%; /* Added to contain content */
 }
 #page6{
     min-height: 100vh;
-    background-color: rgb(2, 1, 1);
+    background-color: #111);
     width: 100%;
-    padding: 5vh 10vh;
+    margin-top: 10vh;
+    margin-bottom: vh;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     position: relative;
+    padding: 5vh 10vh;
 }
 #page6 button img{
     padding-bottom: px;
@@ -550,6 +535,8 @@ summary::marker{
     min-height: 100vh;
     background-color: rgb(255, 255, 255);
     width: 100%;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
     position: relative;
     padding: 5vh 10vh;
 }
@@ -565,13 +552,15 @@ summary::marker{
    border-radius: 50px;
 }
 #page7 h1{
+    margin-top: 5vh;
     color: black;
     font-size: 10vh;
     margin-left: 28vw;
+    margin-top: 5vw;
 }
 .page7content h3{
   color: black;
-  margin-top: 13vw;
+  margin-top: 10vw;
   margin-left: 27vw;
   font-weight: 300;
 }
@@ -613,25 +602,25 @@ summary::marker{
    border-top: 1px solid #dadada;
 }
 .btm7part1{
-    border-right: 1px solid #dadada;
+    /* border-right: 1px solid #dadada; */
     height: 100%;
     width: 30%;
     /* background-color: blue; */
 }
 .btm7part2{
-    border-right: 1px solid #dadada;
+    /* border-right: 1px solid #dadada; */
     height: 100%;
     width: 20%;
     /* background-color: blue; */
 }
 .btm7part3{
-    border-right: 1px solid #dadada;
+    /* border-right: 1px solid #dadada; */
     height: 100%;
     width: 20%;
     /* background-color: blue; */
 }
 .btm7part4{
-    border-right: 1px solid #dadada;
+    /* border-right: 1px solid #dadada; */
     height: 100%;
     width: 18%;
     /* background-color: blue; */
