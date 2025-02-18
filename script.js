@@ -183,18 +183,20 @@ gsap.from(".btm7part4 h4", {  // Add dot for class selector
         scroller: "body",
     }
 });
-
-var tl = gsap.timeline()
-tl.from("#page1",{
+function lastanimation(){
+    var tl = gsap.timeline()
+    tl.from("#page1",{
+        opacity:0,
+    })
+    tl.from("#page1",{
+        transform:"scaleX(0.7) scaleY(0)",
+        borderRadius:"50%",
+    })
+    tl.from("nav",{
     opacity:0,
-})
-tl.from("#page1",{
-    transform:"scaleX(0.7) scaleY(0)",
-    borderRadius:"50%",
-})
-tl.from("nav",{
-opacity:0,
-})
-tl.from("#page1 h1, #page1 p, #page1 div",{
-    opacity:0,
-})
+    })
+    tl.from("#page1 h1, #page1 p, #page1 div",{
+        opacity:0,
+    })
+}
+lastanimation();
